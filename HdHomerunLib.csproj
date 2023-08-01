@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C81AC3D-35A2-4997-A828-D9D1331073B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HdHomerunLib</RootNamespace>
+    <AssemblyName>HdHomerunLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Encoder, Version=2.0.1406.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Expression.Encoder.Types, Version=2.0.1406.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Expression.Encoder.Utilities, Version=2.0.1406.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Services.Client">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Channel.cs">
+      <Link>Silicondust.HDHomerun\Channel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\DataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\DataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\DeviceIdDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\DeviceIdDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\DeviceTypeDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\DeviceTypeDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\ErrorDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\ErrorDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\GetSetNameDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\GetSetNameDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\GetSetValueDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\GetSetValueDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\StringDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\StringDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\UInt32DataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\UInt32DataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DataChunks\UnknownDataChunk.cs">
+      <Link>Silicondust.HDHomerun\DataChunks\UnknownDataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\DeviceException.cs">
+      <Link>Silicondust.HDHomerun\DeviceException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Devices\Device.cs">
+      <Link>Silicondust.HDHomerun\Devices\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Devices\MultiTuner.cs">
+      <Link>Silicondust.HDHomerun\Devices\MultiTuner.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Devices\Tuner.cs">
+      <Link>Silicondust.HDHomerun\Devices\Tuner.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Network.cs">
+      <Link>Silicondust.HDHomerun\Network.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\DiscoveryReplyPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\DiscoveryReplyPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\DiscoveryRequestPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\DiscoveryRequestPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\GetRequestPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\GetRequestPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\GetSetReplyPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\GetSetReplyPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\Packet.cs">
+      <Link>Silicondust.HDHomerun\Packets\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\SetRequestPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\SetRequestPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Packets\UnknownPacket.cs">
+      <Link>Silicondust.HDHomerun\Packets\UnknownPacket.cs</Link>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="MpegTSParser\TSPacket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\libraries\HDHomerun\HDHRLib\Silicondust.HDHomeRun\Documentation\Commands.txt">
+      <Link>Silicondust.HDHomerun\Commands.txt</Link>
+    </Content>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\AmazonSimpleDB.cs">
+      <Link>AmazonSDB\AmazonSimpleDB.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\AmazonSimpleDBClient.cs">
+      <Link>AmazonSDB\AmazonSimpleDBClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\AmazonSimpleDBConfig.cs">
+      <Link>AmazonSDB\AmazonSimpleDBConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\AmazonSimpleDBException.cs">
+      <Link>AmazonSDB\AmazonSimpleDBException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\Attribute.cs">
+      <Link>AmazonSDB\Model\Attribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\CreateDomainRequest.cs">
+      <Link>AmazonSDB\Model\CreateDomainRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\CreateDomainResponse.cs">
+      <Link>AmazonSDB\Model\CreateDomainResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\DeleteAttributesRequest.cs">
+      <Link>AmazonSDB\Model\DeleteAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\DeleteAttributesResponse.cs">
+      <Link>AmazonSDB\Model\DeleteAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\DeleteDomainRequest.cs">
+      <Link>AmazonSDB\Model\DeleteDomainRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\DeleteDomainResponse.cs">
+      <Link>AmazonSDB\Model\DeleteDomainResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\Error.cs">
+      <Link>AmazonSDB\Model\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ErrorResponse.cs">
+      <Link>AmazonSDB\Model\ErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\GetAttributesRequest.cs">
+      <Link>AmazonSDB\Model\GetAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\GetAttributesResponse.cs">
+      <Link>AmazonSDB\Model\GetAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\GetAttributesResult.cs">
+      <Link>AmazonSDB\Model\GetAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\Item.cs">
+      <Link>AmazonSDB\Model\Item.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ListDomainsRequest.cs">
+      <Link>AmazonSDB\Model\ListDomainsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ListDomainsResponse.cs">
+      <Link>AmazonSDB\Model\ListDomainsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ListDomainsResult.cs">
+      <Link>AmazonSDB\Model\ListDomainsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\PutAttributesRequest.cs">
+      <Link>AmazonSDB\Model\PutAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\PutAttributesResponse.cs">
+      <Link>AmazonSDB\Model\PutAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryRequest.cs">
+      <Link>AmazonSDB\Model\QueryRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryResponse.cs">
+      <Link>AmazonSDB\Model\QueryResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryResult.cs">
+      <Link>AmazonSDB\Model\QueryResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryWithAttributesRequest.cs">
+      <Link>AmazonSDB\Model\QueryWithAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryWithAttributesResponse.cs">
+      <Link>AmazonSDB\Model\QueryWithAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\QueryWithAttributesResult.cs">
+      <Link>AmazonSDB\Model\QueryWithAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ReplaceableAttribute.cs">
+      <Link>AmazonSDB\Model\ReplaceableAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\libraries\aws\simpleDB\Amazon.SimpleDB\Model\ResponseMetadata.cs">
+      <Link>AmazonSDB\Model\ResponseMetadata.cs</Link>
+    </Compile>
+    <Compile Include="AzureTableTest\Episode.cs" />
+    <Compile Include="JobQueue\AwsConfig.cs" />
+    <Compile Include="JobQueue\JobQueue.cs" />
+    <Compile Include="Listings\Fetcher.cs" />
+    <Compile Include="Listings\Listings.cs" />
+    <Compile Include="Listings\ListingsStore.cs" />
+    <Compile Include="Listings\Proxy\xtvdWebService.cs" />
+    <Compile Include="MpegTSParser\PidAccumulator.cs" />
+    <Compile Include="MpegTSParser\Tables\EITParser.cs" />
+    <Compile Include="MpegTSParser\Tables\ITableParser.cs" />
+    <Compile Include="MpegTSParser\ParseUtils.cs" />
+    <Compile Include="MpegTSParser\Tables\PMTParser.cs" />
+    <Compile Include="MpegTSParser\Tables\PSIPParser.cs" />
+    <Compile Include="MpegTSParser\Tables\PATParser.cs" />
+    <Compile Include="MpegTSParser\Tables\TableParser.cs" />
+    <Compile Include="MpegTSParser\TransportStreamParser.cs" />
+    <Compile Include="MpegTSParser\TSDemux.cs" />
+    <Compile Include="Receiver\Receiver.cs" />
+    <Compile Include="Receiver\Tuner.cs" />
+    <Compile Include="Receiver\TunerStatus.cs" />
+    <Compile Include="Receiver\VideoStorage.cs" />
+    <Compile Include="Seeker\Ranking.cs" />
+    <Compile Include="Stitcher\Stitcher.cs" />
+    <Compile Include="UserAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\libraries\azure\StorageClient\StorageClient.csproj">
+      <Project>{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}</Project>
+      <Name>StorageClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

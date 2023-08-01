@@ -1,0 +1,8 @@
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\bin\Debug\HdHomerunLib.dll
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\bin\Debug\HdHomerunLib.pdb
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\bin\Debug\StorageClient.dll
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\bin\Debug\StorageClient.pdb
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\bin\Debug\StorageClient.xml
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\obj\Debug\HdHomerunLib.dll
+C:\dev\personalprojects\HdHomerunLib\HdHomerunLib\obj\Debug\HdHomerunLib.pdb
