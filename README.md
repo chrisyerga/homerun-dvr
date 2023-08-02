@@ -9,7 +9,10 @@ DVR running on a PC that uses an HDHomeRun device to capture QAM modulated MPEG2
 > Uses the HDHomeRun device which takes a cable TV signal and tuning/filtering parameters to pull a raw MPEG2 transport stream from a given QAM256 channel from your cable provider.
 
 > What channels are recorded is controlled by the scheduler informed by TV listings and the interests
-> the user has experessed in genre/etc. Basically it's constantly recording _something_ and stores it.
+> expressed in the source code parameters. There's no UI to speak of. I have a web app that shows the recording
+> and transcoding pipeline, etc. but it's more for monitoring the system.
+
+> With dozens of MPEG transport streams and 100s of programs, the receiver is almost always recording *something*. It records things opportunistically and then prioritizes transcoding and making them available against a queue full of raw recordings. 
 
 ### MPEG TS Parser
 
