@@ -27,6 +27,12 @@ DVR running on a PC that uses an HDHomeRun device to capture QAM modulated MPEG2
 > Uses the (now defunct :/) Schedules Direct API to
 > gather EPG listings for the given provider/zip code.
 
+### Stitcher
+
+> Video channels are constantly recorded and everything from a given channel is stored in
+> a collection of video chunks. The stitcher periodically matches up the Guide listings with
+> the raw video streams from the VideoStorage and stitches them together into video files.
+
 ### Orchestration / JobQueue
 
 > The system can utilize many different computers talking to multiple QAM tuners. There can also be multiple transcoders etc. The code uses both AWS and GCP (nee Azure) to maintain a central Job Queue for recording/transcoding etc.

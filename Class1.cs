@@ -49,22 +49,25 @@ namespace HdHomerunLib
 
         public static string GetLocalIP()
         {
-           // Get host name
-           string strHostName = Dns.GetHostName();
-           Console.WriteLine("Host Name: " + strHostName);
+            // Get host name
+            string strHostName = Dns.GetHostName();
+            Console.WriteLine("Host Name: " + strHostName);
 
-           // Find host by name
-           IPHostEntry iphostentry1 = Dns.GetHostEntry(strHostName);
-           IPHostEntry iphostentry = Dns.GetHostByName(strHostName);
+            // Find host by name
+            IPHostEntry iphostentry1 = Dns.GetHostEntry(strHostName);
+            IPHostEntry iphostentry = Dns.GetHostByName(strHostName);
 
-           // Enumerate IP addresses
-           int nIP = 0;
-           foreach(IPAddress ipaddress in iphostentry.AddressList)
-           {
-            Console.WriteLine("IP #" + ++nIP + ": " +
-                              ipaddress.ToString());
-           }
-            
+            // Enumerate IP addresses
+            int nIP = 0;
+            foreach (IPAddress ipaddress in iphostentry.AddressList)
+            {
+                Console.WriteLine("IP #" + ++nIP + ": " +
+                                  ipaddress.ToString());
+            }
+
+            //! Need to set preferred network interface and remember this
+            //! We could also eventually have different networked QAM tuners
+            //! available on different networks.
             return iphostentry.AddressList[0].ToString();
         }
 
@@ -79,18 +82,18 @@ namespace HdHomerunLib
             FileStream capture = new FileStream(string.Format(@"c:\ts-capture-{0}.mpg", DateTime.Now.ToFileTime()), FileMode.Create);
             receivePoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), udpPort);
             int bytes = 0;
-            int nextMeg = 1024*1024;
+            int nextMeg = 1024 * 1024;
 
- //           while (bytes < 25 * 1024 * 1024)
-                while (true)
-                {
+            //           while (bytes < 25 * 1024 * 1024)
+            while (true)
+            {
                 byte[] data = client.Receive(ref receivePoint);
-//                capture.Write(data, 0, data.Length);
+                //                capture.Write(data, 0, data.Length);
                 bytes += data.Length;
                 if (bytes > nextMeg)
                 {
-//                    System.Console.WriteLine("Bytes read: {0}", bytes);
-                    nextMeg += 1024*1024;
+                    //                    System.Console.WriteLine("Bytes read: {0}", bytes);
+                    nextMeg += 1024 * 1024;
                 }
 
 #if true
@@ -131,12 +134,12 @@ namespace HdHomerunLib
                 Tuner tuner = multi.Tuners[0];
                 Channel channel = tuner.Channel;
 
-//                DoSet(multi, "/tuner1/channel", "qam:84");
+                //                DoSet(multi, "/tuner1/channel", "qam:84");
                 DoSet(multi, "/tuner1/channel", "qam:129");
- //               DoSet(multi, "/tuner1/program", "4");
+                //               DoSet(multi, "/tuner1/program", "4");
                 DoSet(multi, "/tuner1/target", string.Format("{0}:{1}", GetLocalIP(), "6502"));
-//                DoSet(multi, "/tuner1/filter", "0x0000-0x00FF 0x07C0-0x07C1 0x1FF0-0x1FFF");
-//                DoSet(multi, "/tuner1/channel", "qam:92");
+                //                DoSet(multi, "/tuner1/filter", "0x0000-0x00FF 0x07C0-0x07C1 0x1FF0-0x1FFF");
+                //                DoSet(multi, "/tuner1/channel", "qam:92");
                 DoSet(multi, "/tuner1/filter", "0x0000-0x007F 0x0800-0x080F 0x0C00-0x1FFE");
 
 
